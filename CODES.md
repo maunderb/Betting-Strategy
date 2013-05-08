@@ -152,44 +152,69 @@ R2=cbind(NAL5,NBE5) # A table of the estimated parameters for Model 2
 # Probability of results given home and away score means
 
 prob=function(p,q){
+
 hs1=dpois(c(0:1000),p)
+
 as1=dpois(c(0:1000),q)
+
 sc=outer(hs1,as1,"*")
+
 HOME=sum(sc[lower.tri(sc)])
+
 DRAW=sum(diag(sc))
+
 AWAY=sum(sc[upper.tri(sc)])
+
 return(cbind(HOME,DRAW,AWAY))}
 
 # Probability of scores given home and away score means
 
 probsc=function(p,q){
+
 hs1=dpois(c(0:10),p)
+
 as1=dpois(c(0:10),q)
+
 sc=outer(hs1,as1,"*")
+
 return(sc)}
 
 # Prob over/under 2.5 goals given home and away score means
 
 prob2.5=function(p,q){
+
 hs1=dpois(c(0:1000),p)
+
 as1=dpois(c(0:1000),q)
+
 sc=outer(hs1,as1,"*")
+
 over=sum(sc)-(sc[1,1]+sc[1,2]+sc[2,1]
+
 +sc[3,1]+sc[1,3]+sc[2,2])
+
 under=1-over
+
 return(cbind(over,under))}
 
 
 # The following functions can be used to decide whether to bet on particular outcomes on a single football match or not. The variables p and q are the same as in Appendix C, h, d, a need to be EU odds for home win, draw or away win respectively and r is the discrepency level, we reccomend setting r = 1:1. Where the R output shows a 0 no bet should be placed, where the output displays a 1 a bet should be placed on this outcome.
 
 STRATEGY1=function(p,q,h,d,a,r){
+
 values=(prob(p,q))/c(1/h,1/d,1/a)
+
 BET=ifelse(values > r,1,0)
+
 return (BET)}
 
 STRATEGY2.5=function(p,q,o,u,r){
+
 values=(prob2.5(p,q))/c(1/o,1/u)
+
 ODDS=cbind(o,u)
+
 BET=ifelse(values>r,1,0)
+
 return (BET) }
 
