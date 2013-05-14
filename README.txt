@@ -5,7 +5,7 @@ Both "FASTCODES.R" and "CODES.R" in the repository provide the same results howe
 
 FASTCODES:
 To just see the estimated parameters from Model 1 and Model 2 and/or make use
-of the prob,probsc,prob2.5 or STRATEGY functions please see "FASTCODES.R" and follow the instructions provided.
+of the prob,probsc,prob2.5 or STRATEGY1 functions please see "FASTCODES.R" and follow the instructions provided.
 
 CODES:
 To follow the derivation of the estimation of parameters and
