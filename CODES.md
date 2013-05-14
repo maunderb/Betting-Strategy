@@ -1,5 +1,5 @@
 # Download your predictive data from www.football-data.co.uk and save as
-# "Data.csv" (a comma seperated value file).
+# "Data.csv" (a comma seperated value file). For example you can download the data used in our workings at http://www.football-data.co.uk/englandm.php 
 # Setting up the data:
 
 DATA=read.csv("Data.csv",header=T) # This reads the data into R
