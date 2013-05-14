@@ -1,7 +1,10 @@
-# Download your predictive data from www.football-data.co.uk and save as
-# "Data.csv" (a comma seperated value file). For example you can download
-# the data used in our workings at http://www.football-data.co.uk/englandm.php 
-# Setting up the data:
+# Ensure that you have downloaded your
+# football data from www.football-data.co.uk and saved it as "Data.csv".
+# This data file needs to be in your R working directory:
+# To set your working directory click "File", click "Change dir..." and 
+# select the folder that your "Data.csv" file is in. 
+
+# Note: we have uploaded the football data that we have used onto this repository.
 
 DATA=read.csv("Data.csv",header=T) # This reads the data into R
 
@@ -148,9 +151,10 @@ R2=cbind(NAL5,NBE5) # A table of the estimated parameters for Model 2
 
 
 
-# The following functions can be used to estimate probabilities given home and away score means, that is, for model 2, for a match between team i and team j, p = 
-#^i^j and q = k^2
-#^j ^ i:
+# The following functions can be used to estimate probabilities given home and away score means,
+# that is, for model 2, for a match between team i and team j, 
+# p = (ALPHA estimate for team i * BETA estimate for team j) and
+# q = (k^2 * ALPHA estimate for team j * BETA estimate for team i).
 
 # Probability of results given home and away score means
 
