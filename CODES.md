@@ -22,7 +22,7 @@ AWAY.SCORE1=HD[,6]
 
 HOME.SCORE2=AD[,5]
 
-AWAY.SCORE2=AD[,5]
+AWAY.SCORE2=AD[,6]
 
 SH=sum(HD[,'FTHG']) # sums the total home scores
 
