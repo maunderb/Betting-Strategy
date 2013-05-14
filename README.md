@@ -4,7 +4,7 @@ Betting-Strategy
 The R codes provided here are related to the project report "Can Maths Beat the Bookies" by Bradley Maunder.
 This project is provided in the repository in pdf format.
 
-Both "FASTCODES.R" and "CODES.R" in the repository provide the same results however:
+Both "FASTCODES.R" and "CODES.R" in the repository provide the same results, however one just gives the results and the other takes the reader through the derivations.
 
 FASTCODES:
 To just see the estimated parameters from Model 1 and Model 2 and/or make use
