@@ -149,8 +149,8 @@ R2=cbind(NAL5,NBE5) # A table of the estimated parameters for Model 2
 
 
 # The following functions can be used to estimate probabilities given home and away score means, that is, for model 2, for a match between team i and team j, p = 
-^i^j and q = k^2
-^j ^ i:
+#^i^j and q = k^2
+#^j ^ i:
 
 # Probability of results given home and away score means
 
